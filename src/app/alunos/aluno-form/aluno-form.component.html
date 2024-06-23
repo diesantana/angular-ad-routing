@@ -1,1 +1,19 @@
-<p>aluno-form works!</p>
+<h5> Criar/Editar Aluno </h5>
+
+<form>
+  <div class="mb-3">
+    <label for="disabled" class="form-label active">#</label>
+    <input  class="form-control" name="disabled" disabled [(ngModel)]="aluno.id" id="disabled" type="text" value="{{aluno.id}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="nome" class="form-label active">Nome</label>
+    <input id="nome" name="nome"  class="form-control" [(ngModel)]="aluno.nome" value="{{aluno.nome}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label active">Email</label>
+    <input id="email" name="email" class="form-control" [(ngModel)]="aluno.email" type="text" value="{{aluno.email}}">
+  </div>
+
+</form>
