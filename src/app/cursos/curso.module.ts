@@ -4,7 +4,7 @@ import { CursosComponent } from './cursos.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursoNotFoundComponent } from './curso-not-found/curso-not-found.component';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from '../app-routing.module';
+import { CursoRoutingModule } from './curso-routing.module';
 
 
 
@@ -17,7 +17,8 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     FormsModule,
-    AppRoutingModule
+    CursoRoutingModule
+    // AppRoutingModule,
   ]
 })
 export class CursoModule { }
