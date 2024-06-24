@@ -2,7 +2,7 @@
 <p>Página: {{pagina}}</p>
 
 <div class="list-group col-4">
-  <a [routerLink]="['/curso', curso.id]" *ngFor="let curso of cursos" class="list-group-item list-group-item-action">
+  <a [routerLink]="['/cursos/', curso.id]" *ngFor="let curso of cursos" class="list-group-item list-group-item-action">
     {{curso.nome}}
   </a>
 </div>

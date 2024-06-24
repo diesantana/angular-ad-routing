@@ -28,7 +28,7 @@ export class CursoDetalheComponent implements OnInit, OnDestroy {
       }
     );
     if(this.curso == null) {
-      this.router.navigate(['/cursoNotFound']);
+      this.router.navigate(['/cursos/cursoNotFound']);
     }
   }
 
