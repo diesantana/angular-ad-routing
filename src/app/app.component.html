@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav *ngIf="mostrarMenu" class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand"  routerLink="">Rotas</a>
 
@@ -36,9 +36,5 @@
 </nav>
 
 <div class="container p-5">
-    <!-- <p>Entre com o id do curso</p>
-    <div class="col-2 mb-3">
-      <input type="text" class="form-control" [(ngModel)]="idCurso">
-    </div> -->
   <router-outlet></router-outlet>
 </div>
