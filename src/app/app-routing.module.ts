@@ -2,16 +2,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-// import { CursosComponent } from './cursos/cursos.component';
-// import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
-// import { CursoNotFoundComponent } from './cursos/curso-not-found/curso-not-found.component';
 
 const routes: Routes = [
+  {
+    path: 'cursos',
+    loadChildren: () => import('./cursos/curso.module').then(m => m.CursoModule)
+  },
+  {
+    path: 'alunos',
+    loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule)
+  },
   {path: '', component: HomeComponent},
-  {path: 'login', component: LoginComponent},
-  // {path: 'cursos', component: CursosComponent},
-  // {path: 'curso/:id', component: CursoDetalheComponent},
-  // {path: 'cursoNotFound', component: CursoNotFoundComponent}
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
