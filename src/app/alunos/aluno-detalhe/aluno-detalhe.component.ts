@@ -20,15 +20,18 @@ export class AlunoDetalheComponent {
   ) { }
 
   ngOnInit() {
-    this.inscricao = this.route.params.subscribe(
-      (params: any) => {
-        let id = params['id'];
-        let _aluno = this.alunosService.getAluno(id);
-        if(_aluno) {
-          this.aluno = _aluno;
-        }
-      }
-    );
+    // this.inscricao = this.route.params.subscribe(
+    //   (params: any) => {
+    //     let id = params['id'];
+    //     let _aluno = this.alunosService.getAluno(id);
+    //     if(_aluno) {
+    //       this.aluno = _aluno;
+    //     }
+    //   }
+    // );
+    this.inscricao = this.route.data.subscribe( (data) => {
+      this.aluno = data['aluno'];
+    });
   }
 
   editarContato(){
