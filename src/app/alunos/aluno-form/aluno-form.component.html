@@ -8,7 +8,7 @@
 
   <div class="mb-3">
     <label for="nome" class="form-label active">Nome</label>
-    <input id="nome" name="nome"  class="form-control" [(ngModel)]="aluno.nome" value="{{aluno.nome}}">
+    <input id="nome" name="nome"  class="form-control" [(ngModel)]="aluno.nome" value="{{aluno.nome}}" (input)="onInput()">
   </div>
 
   <div class="mb-3">
